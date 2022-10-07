@@ -5,13 +5,21 @@ const Form = () => {
     <>
       <div className="login-form">
         <form className="form">
-          <label>Usuario</label>
-          <input type="text" className="input-text" />
-
-          <label>Senha</label>
-          <input type="password" className="input-text" />
-
-          <button>Login</button>
+          <div className="row">
+            <label className="w-90">Usuario</label>
+          </div>
+          <div className="row">
+            <input type="text" className="input-text font" />
+          </div>
+          <div className="row">
+            <label className="w-90">Senha</label>
+          </div>
+          <div className="row">
+            <input type="password" className="input-text font" />
+          </div>
+          <div className="row">
+            <button className="login-button">Login</button>
+          </div>
         </form>
       </div>
     </>

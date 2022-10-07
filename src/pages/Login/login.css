@@ -1,10 +1,30 @@
 .page {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@media screen and (max-width: 900px) {
+  .left-column {
+    display: none;
+  }
+  .right-column {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1920px) {
+  .left-column {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(57, 182, 184);
+  }
+  .right-column {
+    width: 50%;
+    height: 100%;
+  }
 }

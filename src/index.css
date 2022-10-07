@@ -1,5 +1,15 @@
 :root {
   --primary-color: #26213b;
+  --secondary-color: rgb(57, 182, 184);
+}
+
+@viewport {
+  width: device-width;
+  user-zoom: fixed;
+  zoom: 1;
+  min-zoom: 0.5;
+  max-zoom: 4;
+  orientation: portrait;
 }
 
 body {

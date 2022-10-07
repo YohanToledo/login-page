@@ -1,31 +1,76 @@
-@media (max-width: 400px) {
+.form {
+  padding: 12px;
+  font-size: 25px;
+}
+
+.font {
+  font-size: 23px;
+}
+
+.input-text {
+  background-color: var(--primary-color);
+  border: none;
+  border-bottom: 2px solid var(--secondary-color);
+  width: 100%;
+  height: 20px;
+  color: white;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.input-text:focus {
+  border: none;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  background-color: var(--primary-color);
+  border: none;
+  border-bottom: 2px solid var(--secondary-color);
+  width: 100%;
+  height: 20px;
+  color: white;
+  padding: 4px;
+}
+
+.w-90 {
+  width: 100%;
+}
+
+.row {
+  margin: 5px;
+}
+
+.login-form {
+  width: 60%;
+  height: 200px;
+}
+
+.login-button,
+.login-button:hover {
+  margin-top: 25px;
+  margin-left: 1px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 450px) {
   .login-form {
-    width: 60vw;
-    height: 40vh;
+    margin: 27% 20% 15%;
   }
+}
 
-  .form {
-    padding: 12px;
+@media screen and (min-width: 451px) and (max-width: 900px) {
+  .login-form {
+    margin: 30% 20% 15%;
   }
+}
 
-  .input-text {
-    background-color: var(--primary-color);
-    border: none;
-    border-bottom: 2px solid #2b96a8;
-    width: 90%;
-    height: 20px;
-    color: white;
-  }
-
-  .input-text:focus {
-    border: none;
-    box-shadow: 0 0 0 0;
-    outline: 0;
-    background-color: var(--primary-color);
-    border: none;
-    border-bottom: 2px solid #2b96a8;
-    width: 90%;
-    height: 20px;
-    color: white;
+@media screen and (min-width: 901px) and (max-width: 1920px) {
+  .login-form {
+    margin: 40% 20% 15%;
   }
 }
