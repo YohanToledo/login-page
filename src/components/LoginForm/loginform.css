@@ -1,15 +1,31 @@
-.login-form {
-  width: 60vw;
-  height: 40vh;
-}
+@media (max-width: 400px) {
+  .login-form {
+    width: 60vw;
+    height: 40vh;
+  }
 
-.form {
-  padding: 12px;
-}
+  .form {
+    padding: 12px;
+  }
 
-.input-text {
-  background-color: #1e1a2e;
-  border: none;
-  border-bottom: 2px solid #4717f6;
-  width: 90%;
+  .input-text {
+    background-color: var(--primary-color);
+    border: none;
+    border-bottom: 2px solid #2b96a8;
+    width: 90%;
+    height: 20px;
+    color: white;
+  }
+
+  .input-text:focus {
+    border: none;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    background-color: var(--primary-color);
+    border: none;
+    border-bottom: 2px solid #2b96a8;
+    width: 90%;
+    height: 20px;
+    color: white;
+  }
 }

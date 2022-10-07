@@ -5,7 +5,7 @@ const Form = () => {
     <>
       <div className="login-form">
         <form className="form">
-          <label>Username</label>
+          <label>Usuario</label>
           <input type="text" className="input-text" />
 
           <label>Senha</label>
