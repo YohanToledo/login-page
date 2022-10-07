@@ -6,7 +6,7 @@ const Form = () => {
       <div className="login-form">
         <form className="form">
           <div className="row">
-            <label className="w-90">Usuario</label>
+            <label className="w-90">Usuário</label>
           </div>
           <div className="row">
             <input type="text" className="input-text font" />

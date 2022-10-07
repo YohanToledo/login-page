@@ -7,6 +7,15 @@
   flex-flow: row wrap;
 }
 
+.icon {
+  margin: 20%;
+  font-size: 350px;
+}
+
+.left-column {
+  align-items: center;
+}
+
 @media screen and (max-width: 900px) {
   .left-column {
     display: none;
@@ -21,7 +30,7 @@
   .left-column {
     width: 50%;
     height: 100%;
-    background-color: rgb(57, 182, 184);
+    background-color: var(--secondary-color);
   }
   .right-column {
     width: 50%;
