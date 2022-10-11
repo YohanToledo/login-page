@@ -20,10 +20,19 @@ const RegisterForm = () => {
       <div className="custom-form">
         <form className="form" onSubmit={handleSubmit}>
           <div className="row">
-            <label className="w-90 title">Crie sua conta</label>
+            <h1 className="w-90 title">Crie sua conta</h1>
           </div>
           <div className="row">
-            <label className="w-90">Usuário</label>
+            <label className="w-90">Nome completo</label>
+          </div>
+          <div className="row">
+            <i className="input-icon">
+              <FaUser />
+            </i>
+            <Input type="text" />
+          </div>
+          <div className="row">
+            <label className="w-90">Nome de usuário</label>
           </div>
           <div className="row">
             <i className="input-icon">

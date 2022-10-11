@@ -19,3 +19,27 @@
   box-shadow: 0 0 0 0;
   outline: 0;
 }
+
+@media screen and (max-width: 450px) {
+  .input-text,
+  .input-text:focus {
+    padding-left: 28px;
+    padding-bottom: 6px;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 900px) {
+  .input-text,
+  .input-text:focus {
+    padding-left: 28px;
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1920px) {
+  .input-text,
+  .input-text:focus {
+    padding-left: 28px;
+    padding-bottom: 10px;
+  }
+}
