@@ -31,18 +31,18 @@
 
 @media screen and (max-width: 450px) {
   .login-form {
-    margin: 27% 20% 15%;
+    margin: 20% 15% 10%;
   }
 }
 
 @media screen and (min-width: 451px) and (max-width: 900px) {
   .login-form {
-    margin: 30% 20% 15%;
+    margin: 24% 18% 14%;
   }
 }
 
 @media screen and (min-width: 901px) and (max-width: 1920px) {
   .login-form {
-    margin: 40% 20% 15%;
+    margin: 24% 18% 14%;
   }
 }

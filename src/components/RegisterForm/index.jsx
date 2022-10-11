@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Button from "../Button";
-import "./loginform.css";
+import "./registerform.css";
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
+import { MdMail } from "react-icons/md";
 import Input from "../Input";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const LoginForm = () => {
+const RegisterForm = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = () => {
@@ -27,6 +28,15 @@ const LoginForm = () => {
             <Input type="text" />
           </div>
           <div className="row">
+            <label className="w-90">Email</label>
+          </div>
+          <div className="row">
+            <i className="input-icon">
+              <MdMail />
+            </i>
+            <Input type="text" />
+          </div>
+          <div className="row">
             <label className="w-90">Senha</label>
           </div>
           <div className="row">
@@ -36,12 +46,21 @@ const LoginForm = () => {
             <Input type="password" />
           </div>
           <div className="row">
-            <Button isLoading={isLoading}> Login </Button>
+            <label className="w-90">Senha</label>
+          </div>
+          <div className="row">
+            <i className="input-icon">
+              <FaLock />
+            </i>
+            <Input type="password" />
+          </div>
+          <div className="row">
+            <Button isLoading={isLoading}> Concluir cadastro </Button>
           </div>
           <div className="row">
             <span className="register-link">
-              <Link to={"/register"} replace={true}>
-                Não possui uma conta?
+              <Link to={"/"} replace={true}>
+                Fazer login
               </Link>
             </span>
           </div>
@@ -51,4 +70,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

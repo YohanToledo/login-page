@@ -1,11 +1,11 @@
-import LoginForm from "../../components/LoginForm";
-import "./login.css";
+import "./register.css";
 import { BsGraphUp } from "react-icons/bs";
 import { GoGraph } from "react-icons/go";
 import { VscGraph } from "react-icons/vsc";
 import { MdAutoGraph } from "react-icons/md";
+import RegisterForm from "../../components/RegisterForm";
 
-const Login = () => {
+const Register = () => {
   return (
     <>
       <div className="page">
@@ -30,11 +30,11 @@ const Login = () => {
           </div>
         </div>
         <div className="right-column">
-          <LoginForm />
+          <RegisterForm />
         </div>
       </div>
     </>
   );
 };
 
-export default Login;
+export default Register;
