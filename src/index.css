@@ -1,6 +1,18 @@
 :root {
-  --primary-color: rgb(57, 182, 184);
-  --secondary-color: rgb(216, 43, 0);
+  /*--primary-color: rgb(57, 182, 184);
+  --secondary-color: rgb(216, 43, 0);*/
+
+  /*--primary-color: #657a97;
+  --secondary-color: #2b4f71*/
+
+  /*--primary-color: #43506c;
+  --secondary-color: #3d619b;*/
+
+  /*--primary-color: #a163f7;
+  --secondary-color: #45e3ff;*/
+
+  --primary-color: #230350;
+  --secondary-color: #24cbe9;
 }
 
 @viewport {
