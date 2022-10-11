@@ -4,7 +4,8 @@ import "./loginform.css";
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import Input from "../Input";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../styles.css";
 
 const LoginForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +16,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <div className="login-form">
+      <div className="custom-form">
         <form className="form" onSubmit={handleSubmit}>
           <div className="row">
             <label className="w-90">Usuário</label>
@@ -39,11 +40,9 @@ const LoginForm = () => {
             <Button isLoading={isLoading}> Login </Button>
           </div>
           <div className="row">
-            <span className="register-link">
-              <Link to={"/register"} replace={true}>
-                Não possui uma conta?
-              </Link>
-            </span>
+            <Link to={"/register"} replace={true}>
+              <span className="form-link">Não possui uma conta?</span>
+            </Link>
           </div>
         </form>
       </div>

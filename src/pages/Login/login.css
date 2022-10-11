@@ -53,12 +53,12 @@
 
 @media screen and (min-width: 901px) and (max-width: 1920px) {
   .left-column {
-    width: 60%;
+    width: 65%;
     height: 100%;
     background-color: var(--secondary-color);
   }
   .right-column {
-    width: 40%;
+    width: 35%;
     height: 100%;
   }
 }
