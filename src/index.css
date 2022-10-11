@@ -13,6 +13,8 @@
 
   --primary-color: #230350;
   --secondary-color: #24cbe9;
+  --hover-color: #08b1cf;
+  --disabled-color: #037e94;
 }
 
 @viewport {
