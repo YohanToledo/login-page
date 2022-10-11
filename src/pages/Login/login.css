@@ -8,12 +8,37 @@
 }
 
 .icon {
-  margin: 10%;
-  font-size: 120px;
+  margin: 2%;
+  font-size: 220px;
+  width: 70%;
+  margin-left: 25%;
 }
 
 .left-column {
   align-items: center;
+}
+
+.icons-panel {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  width: 95%;
+  height: 40%;
+  margin-top: 20%;
+}
+
+.left-icons {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  right: 0;
+}
+
+.right-icons {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
 }
 
 @media screen and (max-width: 900px) {
