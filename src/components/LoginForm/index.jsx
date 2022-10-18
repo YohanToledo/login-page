@@ -16,7 +16,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <div className="custom-form">
+      <div className="login-form">
         <form className="form" onSubmit={handleSubmit}>
           <div className="row">
             <h1 className="w-90 title">Acesse sua conta</h1>

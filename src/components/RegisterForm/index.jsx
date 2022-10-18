@@ -17,7 +17,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <div className="custom-form">
+      <div className="register-form">
         <form className="form" onSubmit={handleSubmit}>
           <div className="row">
             <h1 className="w-90 title">Crie sua conta</h1>

@@ -8,7 +8,7 @@ import { MdAutoGraph } from "react-icons/md";
 const Login = () => {
   return (
     <>
-      <div className="page">
+     
         <div className="left-column">
           <div className="icons-panel">
             <div className="left-icons">
@@ -32,7 +32,7 @@ const Login = () => {
         <div className="right-column">
           <LoginForm />
         </div>
-      </div>
+      
     </>
   );
 };

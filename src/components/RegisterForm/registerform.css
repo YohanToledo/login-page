@@ -7,9 +7,9 @@
   width: 95%;
 }
 
-.login-form {
+.register-form {
   width: 60%;
-  height: 40%;
+  position: relative;
 }
 
 .input-icon {
