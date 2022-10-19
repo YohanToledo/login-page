@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Button from "../Button";
 import "./loginform.css";
-import { FaUser } from "react-icons/fa";
-import { FaLock } from "react-icons/fa";
 import Input from "../Input";
 import { Link } from "react-router-dom";
 import "../styles.css";
@@ -16,28 +14,22 @@ const LoginForm = () => {
 
   return (
     <>
-      <div className="login-form">
+      <div className="custom-form">
         <form className="form" onSubmit={handleSubmit}>
           <div className="row">
-            <h1 className="w-90 title">Acesse sua conta</h1>
+            <h1 className="title">Acesse sua conta</h1>
           </div>
           <div className="row">
-            <label className="w-90">Usuário</label>
+            <label>Email</label>
           </div>
           <div className="row">
-            <i className="input-icon">
-              <FaUser />
-            </i>
-            <Input type="text" />
+            <Input type="text" icon="email" />
           </div>
           <div className="row">
-            <label className="w-90">Senha</label>
+            <label>Senha</label>
           </div>
           <div className="row">
-            <i className="input-icon">
-              <FaLock />
-            </i>
-            <Input type="password" />
+            <Input type="password" icon="lock" />
           </div>
           <div className="row">
             <Button isLoading={isLoading}> Login </Button>
@@ -47,7 +39,19 @@ const LoginForm = () => {
               <span className="form-link">Não possui uma conta?</span>
             </Link>
           </div>
+          <div className="row">
+            <a href="#abrirModal">modal</a>
+          </div>
         </form>
+      </div>
+
+      <div id="abrirModal" className="modal">
+        <a href="#fechar" title="fechar" className="fechar">
+          X
+        </a>
+        <div>
+          <h2>teste modal</h2>
+        </div>
       </div>
     </>
   );
