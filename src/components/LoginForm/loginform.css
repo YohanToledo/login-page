@@ -1,3 +1,7 @@
+.teste {
+  display: none;
+}
+
 .modal {
   position: fixed;
   bottom: 0;

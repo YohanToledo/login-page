@@ -40,7 +40,9 @@ const LoginForm = () => {
             </Link>
           </div>
           <div className="row">
-            <a href="#abrirModal">modal</a>
+            <a href="#abrirModal" className="teste">
+              modal
+            </a>
           </div>
         </form>
       </div>
