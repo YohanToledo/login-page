@@ -4,12 +4,29 @@ import "./loginform.css";
 import Input from "../Input";
 import { Link } from "react-router-dom";
 import "../styles.css";
+import Api from "../../shared/requests/Api";
 
 const LoginForm = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setIsLoading(!isLoading);
+
+    try {
+      const api = new Api();
+      api.login(email, password).then(() => {
+        console.log("successfully logged in");
+      });
+    } catch (e) {
+      console.log(e);
+      setError(true);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -23,13 +40,13 @@ const LoginForm = () => {
             <label>Email</label>
           </div>
           <div className="row">
-            <Input type="text" icon="email" />
+            <Input type="text" icon="email" setValue={setEmail} />
           </div>
           <div className="row">
             <label>Senha</label>
           </div>
           <div className="row">
-            <Input type="password" icon="lock" />
+            <Input type="password" icon="lock" setValue={setPassword} />
           </div>
           <div className="row">
             <Button isLoading={isLoading}> Login </Button>
@@ -39,6 +56,9 @@ const LoginForm = () => {
               <span className="form-link">Não possui uma conta?</span>
             </Link>
           </div>
+
+          {error ? <div>Invalid Credentials</div> : <></>}
+
           <div className="row">
             <a href="#abrirModal" className="teste">
               modal
