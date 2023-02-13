@@ -1,4 +1,4 @@
-.font {
+.font-20 {
   font-size: 20px;
 }
 
@@ -52,4 +52,19 @@
     padding-left: 28px;
     padding-bottom: 10px;
   }
+}
+
+.error-msg {
+  font-size: 16px;
+  padding: 6px;
+  color: red;
+  display: none;
+}
+
+input:invalid[focused="true"] ~ span {
+  display: block;
+}
+
+input:invalid[focused="true"] {
+  border-bottom: 1px solid red;
 }

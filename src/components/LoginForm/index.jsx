@@ -32,7 +32,7 @@ const LoginForm = () => {
   return (
     <>
       <div className="custom-form">
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit} autocomplete="off">
           <div className="row">
             <h1 className="title">Acesse sua conta</h1>
           </div>
@@ -53,7 +53,9 @@ const LoginForm = () => {
           </div>
           <div className="row">
             <Link to={"/register"} replace={true}>
-              <span className="form-link">Não possui uma conta?</span>
+              <span className="form-link">
+                Não possui uma conta? Cadastre-se já!
+              </span>
             </Link>
           </div>
 
