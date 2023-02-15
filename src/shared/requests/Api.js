@@ -24,19 +24,22 @@ class Api {
   };
 
   register = async (name, email, password) => {
-    let result = false;
-    axios
-      .post(`${this.BASE_URL}/users`, {
-        name,
-        email,
-        password,
-      })
-      .then(() => {
-        result = true;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    let result;
+
+    try {
+      result = await axios
+        .post(`${this.BASE_URL}/users`, {
+          fullName: name,
+          email,
+          password,
+        })
+
+      console.log(result)
+    }
+    catch (e) {
+      // console.log(e.response)
+      return e.response
+    }
 
     return result;
   };

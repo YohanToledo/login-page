@@ -6,17 +6,18 @@ export const REGEX = {
 
 const validatePassword = (password, confirmPass) => {
   let result = false;
+
   const passwordsAreEqual = password === confirmPass;
 
   if (passwordsAreEqual) {
-    result = String(password).toLowerCase().match(REGEX.password);
+    result = String(password).match(REGEX.password);
   }
 
   return result;
 };
 
 const validateEmail = (email) => {
-  return String(email).toLowerCase().match(REGEX.email);
+  return String(email).match(REGEX.email);
 };
 
 export { validatePassword, validateEmail };

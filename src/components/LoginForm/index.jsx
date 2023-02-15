@@ -5,8 +5,10 @@ import Input from "../Input";
 import { Link } from "react-router-dom";
 import "../styles.css";
 import Api from "../../shared/requests/Api";
+import Modal from "../Modal";
 
 const LoginForm = () => {
+  const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,6 +16,7 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setShowModal(true);
     setIsLoading(!isLoading);
 
     try {
@@ -60,23 +63,14 @@ const LoginForm = () => {
           </div>
 
           {error ? <div>Invalid Credentials</div> : <></>}
-
-          <div className="row">
-            <a href="#abrirModal" className="teste">
-              modal
-            </a>
-          </div>
         </form>
       </div>
 
-      <div id="abrirModal" className="modal">
-        <a href="#fechar" title="fechar" className="fechar">
-          X
-        </a>
-        <div>
-          <h2>teste modal</h2>
-        </div>
-      </div>
+      <Modal
+        onClose={() => setShowModal(false)}
+        show={showModal}
+        msg={"Email ou Senha Inválidos!"}
+      />
     </>
   );
 };
