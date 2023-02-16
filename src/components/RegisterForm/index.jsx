@@ -32,8 +32,8 @@ const RegisterForm = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    if (validateData()) {
-      try {
+    try {
+      if (validateData()) {
         const api = new Api();
         const response = await api.register(name, email, password);
         console.log(response);
@@ -47,15 +47,15 @@ const RegisterForm = () => {
           setModalMsg({ msg: "Cadastrado com sucesso", type: "success" });
           setShowModal(true);
         }
-      } catch (error) {
-        console.log(error);
-        setModalMsg({ msg: "Erro interno! Contate o Suporte!", type: "error" });
+      } else {
         setShowModal(true);
-      } finally {
-        setIsLoading(false);
       }
-    } else {
+    } catch (error) {
+      console.log(error);
+      setModalMsg({ msg: "Erro interno! Contate o Suporte!", type: "error" });
       setShowModal(true);
+    } finally {
+      setIsLoading(false);
     }
   };
 
