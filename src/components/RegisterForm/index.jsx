@@ -48,6 +48,10 @@ const RegisterForm = () => {
           setShowModal(true);
         }
       } else {
+        setModalMsg({
+          msg: "As senhas devem ser iguais!",
+          type: "error",
+        });
         setShowModal(true);
       }
     } catch (error) {
