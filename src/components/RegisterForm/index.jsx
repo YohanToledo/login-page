@@ -21,7 +21,7 @@ const RegisterForm = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const error = {
-    name: "O nome deve conter no minimo 3 letras",
+    name: "O nome deve conter apenas letras! (mínimo: 4)",
     email: "Formato de email inválido",
     password:
       "A senha deve conter no mínimo 8 caracteres e incluir letra maiúscula, minúscula, números e caracteres especiais.",
@@ -82,7 +82,7 @@ const RegisterForm = () => {
               setValue={setName}
               errorMessage={error.name}
               required={true}
-              pattern={"^[A-Za-z]{3,32}$"}
+              pattern={"^[^ ][A-zÀ-ž ]{3,32}$"}
             />
           </div>
           <div className="row">
