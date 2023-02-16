@@ -10,7 +10,10 @@ import Modal from "../Modal";
 
 const RegisterForm = () => {
   const [showModal, setShowModal] = useState(false);
-  const [modalMsg, setModalMsg] = useState("As senhas devem ser iguais!");
+  const [modalMsg, setModalMsg] = useState({
+    msg: "As senhas devem ser iguais!",
+    type: "error",
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -25,28 +28,32 @@ const RegisterForm = () => {
     confirmPassword: "Campo obrigatorio",
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
     if (validateData()) {
-      const api = new Api();
-      api
-        .register(name, email, password)
-        .then((res) => {
-          console.log(res);
-          if (res.status === 400) {
-            setModalMsg("Email já cadastrado!");
-            setShowModal(true);
-          }
-        })
-        .catch((err) => {
-          console.log(err);
+      try {
+        const api = new Api();
+        const response = await api.register(name, email, password);
+        console.log(response);
 
-          setModalMsg("Erro interno! Contate o Suporte!");
+        if (response.status === 400) {
+          setModalMsg({ msg: "Email já cadastrado!", type: "error" });
           setShowModal(true);
-        })
-        .finally(() => setIsLoading(false));
+        }
+
+        if (response.status === 201) {
+          setModalMsg({ msg: "Cadastrado com sucesso", type: "success" });
+          setShowModal(true);
+        }
+      } catch (error) {
+        console.log(error);
+        setModalMsg({ msg: "Erro interno! Contate o Suporte!", type: "error" });
+        setShowModal(true);
+      } finally {
+        setIsLoading(false);
+      }
     } else {
       setShowModal(true);
     }
@@ -133,7 +140,7 @@ const RegisterForm = () => {
       <Modal
         onClose={() => setShowModal(false)}
         show={showModal}
-        msg={modalMsg}
+        msgAndType={modalMsg}
       />
     </>
   );

@@ -6,19 +6,23 @@ class Api {
   }
 
   login = async (email, password) => {
-    let result = false;
-    axios
-      .post(`${this.BASE_URL}/auth/login`, {
-        email,
-        password,
-      })
-      .then((res) => {
-        window.localStorage.setItem("coinomy_token", res.data.token);
-        result = true;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    let result;
+
+    try {
+      result = await axios
+        .post(`${this.BASE_URL}/auth/login`, {
+          email,
+          password,
+        })
+
+      if (result.status === 201) {
+        window.localStorage.setItem("coinomy_token", result.data.token);
+      }
+    }
+    catch (e) {
+      // console.log(e.response)
+      return e.response
+    }
 
     return result;
   };
